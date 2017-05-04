@@ -64,7 +64,7 @@ def inception2(name, input, channels, \
     cov3 = img_conv_layer(name=conv3, input=cov3r, filter_size=3,
                           num_filters=filter3, stride=1, padding=1,
                           bias_attr=bias_attr,
-                          param_attr=xavier(conv3r.num_filters, 3))
+                          param_attr=xavier(cov3r.num_filters, 3))
 
     cov5r = img_conv_layer(name=conv5r, input=input, filter_size=1,
                            num_channels=channels, num_filters=filter5R,
